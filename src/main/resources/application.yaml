@@ -1,0 +1,29 @@
+#### Server
+server:
+  tomcat:
+    max-threads: 100
+
+#### Spring
+spring:
+  application:
+    name: @project.name@
+    version: @project.version@
+    description: @project.description@
+  profiles:
+    active: local
+  output:
+    ansi:
+      enabled: always
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: development-group
+
+#### Manual Producer&Consumer
+producer:
+  enabled: false
+consumer:
+  email:
+    enabled: false
+  notification:
+    enabled: false
